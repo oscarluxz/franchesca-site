@@ -1,0 +1,3 @@
+Pon aquí tus fotos con estos nombres EXACTOS:
+foto1.jpg, foto2.jpg, foto3.jpg, foto4.jpg, foto5.jpg, foto6.jpg
+(pueden ser .png o .gif, solo cambia la extensión en index.html)

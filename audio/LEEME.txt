@@ -1,0 +1,3 @@
+Pon aquí tu canción descargada con el nombre EXACTO: cancion.mp3
+(si tu archivo es .wav, .ogg o .m4a, cambia la extensión dentro de
+index.html, en la línea: <audio id="bgAudio" src="audio/cancion.mp3" ...)

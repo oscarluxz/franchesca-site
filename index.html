@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Franchesca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- contenedor donde caen los corazones flotantes -->
+<div class="hearts-container" id="heartsContainer" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="hero-eyebrow">una página hecha con mi arte para</p>
+  <h1 class="hero-name">Franchesca</h1>
+  <p class="hero-sub">(sí, es para ti, mejor no la cierres todavía) </p>
+  <button class="scroll-cue" id="scrollCue" type="button" onclick="document.getElementById('galeria').scrollIntoView({behavior:'smooth'})">mira un poco más ↓</button>
+</header>
+
+<main>
+
+
+  <section id="galeria" class="gallery-section">
+    <p class="section-eyebrow">capítulo uno</p>
+    <h2 class="section-title">Nuestro primer beso</h2>
+    <p class="section-sub"></p>
+
+    <div class="gallery">
+      <figure class="polaroid rot-1" data-filename="images/foto1.jpg">
+        <img src="images/foto1.jpg" alt="Foto 1 de nosotros" loading="lazy">
+        <figcaption>uno de mis favoritos</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="reason-section">
+    <p class="section-eyebrow">capítulo dos</p>
+    <h2 class="section-title">Una razón random de por qué me gustas</h2>
+    <div class="reason-card">
+      <p class="reason-text" id="reasonText">Porque incluso esto que estás leyendo lo escribí pensando en cómo hacerte sonreír.</p>
+    </div>
+    <button class="btn btn-secondary" id="reasonBtn" type="button">dame otra razón →</button>
+  </section>
+
+  <section class="letter-section">
+    <p class="section-eyebrow">capítulo tres</p>
+    <h2 class="section-title">Tengo algo para ti</h2>
+    <p class="section-sub">le puse más esfuerzo a esto que a cualquier tarea este semestre</p>
+    <button class="envelope-btn" id="openLetterBtn" type="button" aria-haspopup="dialog">
+      <span class="envelope-icon">💌</span>
+      <span>Abrir mi carta</span>
+    </button>
+  </section>
+
+
+
+</main>
+
+<footer class="site-footer">
+  hecho a mano (bueno, a teclado) con mucho cariño, para ti mi reina ❤️
+</footer>
+
+<!-- Modal de la carta -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="letter-card" role="dialog" aria-modal="true" aria-label="Carta para Franchesca">
+    <button class="modal-close" id="closeLetterBtn" type="button" aria-label="Cerrar carta">✕</button>
+
+    <p class="letter-greeting">Para Franchesca,</p>
+
+    <div class="letter-body">
+      <p>Sé que la mayoría de las cartas empiezan con algo súper profundo, pero la verdad lleve más rato pensando cómo abrir esta frase que pensando en lo que realmente quiero decirte. Así que vamos directo: te quiero, y mucho.</p>
+
+      <p>Estudio programación, y aunque aun no se me da excelente programación, sí tengo una cosa clara: quiero expresar mi amor y mis sentimientos por medio de eso que estudio. Cada línea de código, cada proyecto que te enseño antes de tiempo porque no aguanto esperar, cada cosa que hago con mis manos tiene, en el fondo, un poco de ti metido ahí.</p>
+
+      <p>Todavía no tengo una obra maestra terminada (dame tiempo, ando en eso), pero esta página es mi primer intento de hacerte algo solo para ti, porque te lo mereces, y hasta mas.</p>
+
+      <p>Gracias por aguantar mis ideas random, mis locuras, mis problemas, pero sobre todo mi loca forma de verte, cada dia te conviertes mas especial para mi.</p>
+
+      <p>Te quiero, Franchesca. Muchísimo.</p>
+    </div>
+
+    <p class="letter-sign">Con cariño (y algo de código),<br>tu programador favorito ❤️</p>
+  </div>
+</div>
+
+<!-- Widget de música -->
+<div class="music-widget" id="musicWidget">
+  <div class="music-art" id="musicArt">🎵</div>
+  <div class="music-info">
+    <p class="music-title">Franchesca</p>
+    <p class="music-hint" id="musicHint">toca para reproducir</p>
+  </div>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música">▶</button>
+</div>
+
+<!-- el audio real va aquí, oculto. el widget de arriba es la interfaz visible -->
+<audio id="bgAudio" src="audio/cancion.mp3" loop preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
